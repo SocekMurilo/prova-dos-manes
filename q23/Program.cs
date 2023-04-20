@@ -1,9 +1,10 @@
 ﻿using static System.Console;
 using System.Collections.Generic;
+using System.Linq;
 
-void candidatos = getCandidatos();
+var candidatos = getCandidatos();
 
-// Use as seguintes funções para realizar essa tarefa:
+// Use alizar esss seguintes funções para reaa tarefa:
 // collection.Select(função)
 // collection.Where(condição)
 // collection.Take(quantidade)
@@ -15,21 +16,24 @@ void candidatos = getCandidatos();
 // collection.Average() [Função que tira média]
 
 // Consulta 1: Nome de todos os cadidatos que obtiveram nota superior ou igual a 700 em todas as etapas
+Candidato candidato = new Candidato();
 var query1 = candidatos;
 
 foreach (var item in query1)
-    WriteLine(item);
-
+{
+    WriteLine(candidato.Nome.Where(item => candidato.PontuacaoDinamica >= 700 && candidato.PontuacaoDinamica2 >= 700 && candidato.PontuacaoEntrevista >= 700 && candidato.PontuacaoProva >= 700));
+}
 
 // Consulta 2: Top 3 candidatos em nota da prova
 var query2 = candidatos;
 
-foreach (var item in query2)
-    WriteLine(item);
 
-// Consulta 3: Quantidade de candidatos aprovados, isto é, nenhuma nota abaixo de 600 e ao menos uma igual ou maior que 800
-var query3 = candidatos;
-WriteLine(query3);
+foreach (var item in query2)
+    WriteLine(query2.Select(item => candidato.PontuacaoProva >= 700));
+
+// // Consulta 3: Quantidade de candidatos aprovados, isto é, nenhuma nota abaixo de 600 e ao menos uma igual ou maior que 800
+// var query3 = candidatos;
+// WriteLine(query3);
 
 IEnumerable<Candidato> getCandidatos()
 {
