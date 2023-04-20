@@ -1,0 +1,18 @@
+Questões de C#
+
+Nível Estagiário 	- q1
+Nível Aprendiz		- q2
+Nível Meio-Oficial	- q22
+Nível Meio-Oficial	- q15
+
+Questões de Orientação a Objetos
+
+Nível Estagiário	- q5
+Nível Estagiário	- q17
+Nível Aprendiz		- q6
+Nível Engenheiro	- q8
+
+
+Questões de LINQ
+
+q23
